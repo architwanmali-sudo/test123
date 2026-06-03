@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Himalayan Explorers | Premium Adventure Tourism in Manali</title>
+    <meta name="description" content="Join The Himalayan Explorers for premium trekking, hiking, camping, and authentic adventure tours in the Himalayas. Explore Beyond Limits with Mangal Thakur.">
+    <meta name="keywords" content="Himalayan Explorers, Manali Trekking, Hiking India, Adventure Tours, Himalayan Expeditions, Camping Manali, Mangal Thakur">
+    <meta name="author" content="The Himalayan Explorers">
+    <meta name="theme-color" content="#0F172A">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="The Himalayan Explorers | Explore Beyond Limits">
+    <meta property="og:description" content="Premium trekking, hiking, and adventure tours in the Himalayas based in Manali.">
+    <meta property="og:image" content="https://kommodo.ai/i/e4hl6UMCRo3MWeZBry9s">
+    <meta property="og:url" content="https://thehimalayanexplorers.com">
+    <meta property="og:type" content="website">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "The Himalayan Explorers",
+      "image": "https://kommodo.ai/i/ueoSeLx4Be1d8ROB81vp",
+      "@id": "",
+      "url": "https://thehimalayanexplorers.com",
+      "telephone": "+919418503080",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nasogi",
+        "addressLocality": "Manali",
+        "addressRegion": "Himachal Pradesh",
+        "postalCode": "175131",
+        "addressCountry": "IN"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "150"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Mangal Thakur"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0F172A',
+                            orange: '#F97316',
+                            white: '#F8FAFC',
+                            green: '#166534'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Cinzel', 'serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        /* Base Styles & Loading Screen */
+        body { background-color: #F8FAFC; color: #334155; overflow-x: hidden; }
+        .dark body { background-color: #0F172A; color: #F8FAFC; }
+        
+        #loader {
+            position: fixed; inset: 0; z-index: 9999;
+            background: #0F172A; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; transition: opacity 0.8s ease;
+        }
+        .spinner {
+            width: 50px; height: 50px; border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%; border-top-color: #F97316; animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Scroll Progress */
+        #progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 4px; z-index: 9998; }
+        #progress-bar { height: 100%; background: #F97316; width: 0%; }
+
+        /* Hero Slider & Effects */
+        .hero-slide {
+            position: absolute; inset: 0; opacity: 0; transition: opacity 1.5s ease-in-out, transform 10s linear;
+            background-size: cover; background-position: center; transform: scale(1.05);
+        }
+        .hero-slide.active { opacity: 1; transform: scale(1); z-index: 10; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(15,23,42,0.4), rgba(15,23,42,0.8)); z-index: 20; }
+        .hero-content { position: relative; z-index: 30; }
+        
+        /* Snow Effect */
+        #snow-container { position: absolute; inset: 0; pointer-events: none; z-index: 25; overflow: hidden; }
+        .snowflake {
+            position: absolute; top: -10px; background: white; border-radius: 50%;
+            opacity: 0.8; animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to { transform: translateY(100vh); }
+        }
+
+        /* Clouds Parallax */
+        .clouds {
+            position: absolute; bottom: -50px; left: 0; width: 200%; height: 250px;
+            background: url('https://cdn.pixabay.com/photo/2021/11/24/11/01/clouds-6820794_1280.png') repeat-x;
+            background-size: contain; opacity: 0.4; z-index: 28; animation: cloudMove 60s linear infinite; pointer-events: none;
+        }
+        @keyframes cloudMove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+        /* Glassmorphism Navbar */
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.1); backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.4s ease;
+        }
+        .glass-nav.scrolled { background: rgba(15, 23, 42, 0.95); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); padding-top: 10px; padding-bottom: 10px; }
+
+        /* Image Hover Zoom */
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom { transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .img-zoom-container:hover .img-zoom { transform: scale(1.1); }
+
+        /* Masonry Gallery */
+        .masonry { column-count: 1; column-gap: 1.5rem; }
+        @media (min-width: 768px) { .masonry { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry { column-count: 3; } }
+        .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; display: inline-block; width: 100%; cursor: pointer; }
+
+        /* Lightbox */
+        #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 99999; justify-content: center; align-items: center; }
+        #lightbox.active { display: flex; }
+        #lightbox img { max-width: 90%; max-height: 90vh; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+
+        /* Animations on Scroll */
+        .fade-in-up { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+
+        /* Floating Buttons */
+        .float-btn { transition: all 0.3s ease; }
+        .float-btn:hover { transform: translateY(-5px) scale(1.05); }
+
+        /* Accordion */
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    </style>
+</head>
+<body class="font-body antialiased selection:bg-brand-orange selection:text-white dark">
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <img src="https://kommodo.ai/i/ueoSeLx4Be1d8ROB81vp" alt="The Himalayan Explorers Logo" class="w-32 mb-6 animate-pulse">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div id="progress-container"><div id="progress-bar"></div></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 glass-nav py-4 transition-all duration-300">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="https://kommodo.ai/i/ueoSeLx4Be1d8ROB81vp" alt="Logo" class="w-12 h-12 rounded-full object-cover group-hover:scale-105 transition">
+                <span class="text-white font-heading font-bold text-xl tracking-wider hidden md:block">The Himalayan<br>Explorers</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-8 text-white text-sm uppercase tracking-widest font-medium">
+                <a href="#home" class="hover:text-brand-orange transition">Home</a>
+                <a href="#about" class="hover:text-brand-orange transition">About</a>
+                <a href="#founder" class="hover:text-brand-orange transition">Founder</a>
+                <a href="#treks" class="hover:text-brand-orange transition">Treks</a>
+                <a href="#gallery" class="hover:text-brand-orange transition">Gallery</a>
+                <a href="#reviews" class="hover:text-brand-orange transition">Reviews</a>
+                <a href="#contact" class="hover:text-brand-orange transition">Contact</a>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="hidden lg:flex items-center gap-4">
+                <button onclick="toggleDarkMode()" class="text-white hover:text-brand-orange transition text-xl"><i class="fa-solid fa-moon" id="theme-icon"></i></button>
+                <a href="tel:+919418503080" class="text-white hover:text-brand-orange transition"><i class="fa-solid fa-phone"></i> +91 94185 03080</a>
+                <a href="#treks" class="bg-brand-orange text-white px-6 py-2 rounded-full hover:bg-orange-600 transition shadow-lg shadow-orange-500/30 uppercase text-sm tracking-wide font-bold">Book Now</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-brand-blue/95 backdrop-blur-md border-t border-white/10 flex-col text-white text-center py-6 space-y-4 shadow-2xl">
+            <a href="#home" class="mobile-link block hover:text-brand-orange">Home</a>
+            <a href="#about" class="mobile-link block hover:text-brand-orange">About</a>
+            <a href="#founder" class="mobile-link block hover:text-brand-orange">Founder</a>
+            <a href="#treks" class="mobile-link block hover:text-brand-orange">Treks</a>
+            <a href="#gallery" class="mobile-link block hover:text-brand-orange">Gallery</a>
+            <a href="#contact" class="mobile-link block hover:text-brand-orange">Contact</a>
+            <a href="#treks" class="mobile-link inline-block bg-brand-orange px-6 py-2 rounded-full mt-4">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden bg-brand-blue">
+        <!-- Slider Images -->
+        <div class="hero-slide active" style="background-image: url('https://kommodo.ai/i/e4hl6UMCRo3MWeZBry9s');"></div>
+        <div class="hero-slide" style="background-image: url('https://kommodo.ai/i/Ov280WsMAJF2R3CIMWUu');"></div>
+        <div class="hero-slide" style="background-image: url('https://kommodo.ai/i/YD3ozLt2lBZTwuu3Tvfn');"></div>
+        
+        <!-- Overlays & Effects -->
+        <div class="hero-overlay"></div>
+        <div id="snow-container"></div>
+        <div class="clouds"></div>
+
+        <!-- Hero Content -->
+        <div class="hero-content container mx-auto px-4 text-center text-white mt-16">
+            <span class="text-brand-orange uppercase tracking-[0.3em] font-semibold text-sm md:text-base mb-4 block animate-fade-in-up">The Himalayan Explorers</span>
+            <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight drop-shadow-2xl">
+                EXPLORE <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-yellow-400">BEYOND LIMITS</span>
+            </h1>
+            <p class="text-lg md:text-xl lg:text-2xl font-light mb-8 max-w-3xl mx-auto drop-shadow-md leading-relaxed">
+                Every mountain has a story.<br>
+                Every trail creates memories.<br>
+                Every adventure changes you.
+            </p>
+            <p class="text-sm md:text-base mb-10 max-w-2xl mx-auto text-gray-200">Join The Himalayan Explorers and discover the true spirit of the Himalayas.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+                <a href="#treks" class="w-full sm:w-auto bg-brand-orange text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-orange-600 transition shadow-[0_0_20px_rgba(249,115,22,0.4)] hover:-translate-y-1">
+                    Explore Adventures
+                </a>
+                <a href="#contact" class="w-full sm:w-auto bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-white hover:text-brand-blue transition hover:-translate-y-1">
+                    Book Your Trek
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30 text-white flex flex-col items-center opacity-70 hover:opacity-100 transition animate-bounce">
+            <span class="text-xs uppercase tracking-widest mb-2">Scroll</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+    </header>
+
+    <!-- About Us -->
+    <section id="about" class="py-24 bg-white dark:bg-brand-blue relative z-10">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Image - Using placeholder as requested since local upload not available via url, user can replace -->
+                <div class="w-full lg:w-1/2 fade-in-up img-zoom-container rounded-2xl shadow-2xl relative">
+                    <div class="absolute -inset-4 bg-brand-orange/20 rounded-2xl transform -rotate-3 -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1522362375525-468b3dc8ce1a?auto=format&fit=crop&q=80" alt="Trekking Group" class="img-zoom w-full h-auto rounded-2xl object-cover aspect-[4/3]">
+                    <!-- Placeholder Comment for User: REPLACE THE ABOVE 'src' WITH YOUR UPLOADED TREKKING GROUP PHOTO -->
+                    <div class="absolute bottom-6 right-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-xl flex items-center gap-4 animate-float">
+                        <div class="bg-brand-orange text-white w-12 h-12 flex justify-center items-center rounded-full text-xl"><i class="fa-solid fa-star"></i></div>
+                        <div>
+                            <p class="font-bold text-gray-900 dark:text-white leading-tight">5.0 Rating</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Google Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2 fade-in-up">
+                    <span class="text-brand-orange font-bold uppercase tracking-widest mb-2 block">Our Story</span>
+                    <h2 class="font-heading text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white leading-tight">More Than a Trek.<br><span class="text-brand-orange">A Journey of a Lifetime.</span></h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
+                        The Himalayan Explorers was founded to help people discover the breathtaking beauty of the Himalayas through safe, meaningful, and unforgettable adventures.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 text-lg leading-relaxed">
+                        From alpine meadows and snowy mountain passes to remote villages and stunning summit views, every expedition is carefully designed to create lifelong memories. We believe that mountains do more than challenge the body—they inspire the soul.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-green text-xl"></i>
+                            <span class="font-semibold text-gray-800 dark:text-gray-200">Safe Journeys</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-green text-xl"></i>
+                            <span class="font-semibold text-gray-800 dark:text-gray-200">Authentic Vibe</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-green text-xl"></i>
+                            <span class="font-semibold text-gray-800 dark:text-gray-200">Expert Team</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-green text-xl"></i>
+                            <span class="font-semibold text-gray-800 dark:text-gray-200">Eco-Friendly</span>
+                        </div>
+                    </div>
+                    <img src="https://kommodo.ai/i/ueoSeLx4Be1d8ROB81vp" alt="Logo" class="w-24 opacity-50 dark:opacity-80 grayscale hover:grayscale-0 transition">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet The Founder -->
+    <section id="founder" class="py-24 bg-gray-50 dark:bg-slate-900/50 relative">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 fade-in-up">
+                    <span class="text-brand-orange font-bold uppercase tracking-widest mb-2 block">Meet The Guide</span>
+                    <h2 class="font-heading text-4xl lg:text-5xl font-bold mb-2 text-gray-900 dark:text-white">Mangal Thakur</h2>
+                    <h3 class="text-xl text-brand-orange mb-6 font-medium">Founder & Lead Himalayan Guide</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg leading-relaxed">
+                        Born and raised in the Himalayas, Mangal Thakur has spent years exploring mountain trails, guiding adventurers, and sharing the rich culture of the mountains.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 text-lg leading-relaxed">
+                        His mission is to help people experience the Himalayas safely while creating unforgettable memories and meaningful connections with nature. Under his leadership, The Himalayan Explorers has become a beacon of trust for adventurers worldwide.
+                    </p>
+                    <a href="#contact" class="inline-flex items-center gap-2 border-b-2 border-brand-orange text-gray-900 dark:text-white pb-1 font-bold hover:text-brand-orange transition">
+                        Speak with Mangal <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Image - Using placeholder as requested, user can replace -->
+                <div class="w-full lg:w-1/2 fade-in-up text-center lg:text-right">
+                    <div class="inline-block relative">
+                        <div class="absolute inset-0 border-2 border-brand-orange rounded-full transform translate-x-4 translate-y-4"></div>
+                        <img src="https://images.unsplash.com/photo-1544626053-8985dc34ae63?auto=format&fit=crop&q=80" alt="Mangal Thakur - Founder" class="relative z-10 w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-2xl border-4 border-white dark:border-slate-800">
+                        <!-- Placeholder Comment for User: REPLACE THE ABOVE 'src' WITH YOUR UPLOADED FOUNDER PHOTO -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 bg-white dark:bg-brand-blue">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <span class="text-brand-orange font-bold uppercase tracking-widest mb-2 block">Our Promise</span>
+                <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">Why Trek With Us?</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature Cards -->
+                <div class="bg-gray-50 dark:bg-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300 border-b-4 border-brand-orange fade-in-up">
+                    <i class="fa-solid fa-map text-4xl text-brand-orange mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Experienced Local Guides</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Born in the mountains, our guides know every trail and weather pattern.</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300 border-b-4 border-brand-green fade-in-up" style="transition-delay: 100ms;">
+                    <i class="fa-solid fa-shield-heart text-4xl text-brand-green mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Safety First Approach</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">We strictly follow international safety standards and carry medical kits on every trek.</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300 border-b-4 border-blue-500 fade-in-up" style="transition-delay: 200ms;">
+                    <i class="fa-solid fa-campground text-4xl text-blue-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Premium Camping Equipment</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">High-quality tents, sleeping bags, and gear to keep you warm and comfortable.</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300 border-b-4 border-yellow-500 fade-in-up" style="transition-delay: 300ms;">
+                    <i class="fa-solid fa-users text-4xl text-yellow-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Small Group Experiences</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Intimate batches ensure personalized attention and better group bonding.</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300 border-b-4 border-purple-500 fade-in-up">
+                    <i class="fa-solid fa-headset text-4xl text-purple-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">24×7 Support</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">From pre-trek inquiries to post-trek feedback, we are always here for you.</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300 border-b-4 border-pink-500 fade-in-up" style="transition-delay: 100ms;">
+                    <i class="fa-solid fa-tags text-4xl text-pink-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Affordable Packages</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Premium experiences curated to provide the best value for your money.</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300 border-b-4 border-teal-500 fade-in-up" style="transition-delay: 200ms;">
+                    <i class="fa-solid fa-mountain-sun text-4xl text-teal-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Authentic Adventures</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Experience local cuisine, culture, and untold stories of the Himalayas.</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300 border-b-4 border-brand-orange fade-in-up" style="transition-delay: 300ms;">
+                    <i class="fa-solid fa-camera text-4xl text-brand-orange mb-6"></i>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Memorable Experiences</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Leave with memories, friendships, and stories that will last a lifetime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Treks -->
+    <section id="treks" class="py-24 bg-gray-50 dark:bg-slate-900 relative">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 fade-in-up">
+                <div class="max-w-2xl">
+                    <span class="text-brand-orange font-bold uppercase tracking-widest mb-2 block">Expeditions</span>
+                    <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">Featured Treks</h2>
+                </div>
+                <a href="#contact" class="mt-6 md:mt-0 text-brand-orange font-bold hover:text-orange-600 uppercase tracking-widest text-sm flex items-center gap-2 transition">
+                    View All Packages <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Trek Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Trek Card 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl group fade-in-up">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Hampta Pass Trek" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 right-4 bg-white dark:bg-slate-900 px-3 py-1 rounded-full text-xs font-bold text-brand-orange shadow-lg">Moderate</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-brand-orange transition">Hampta Pass Trek</h3>
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm text-gray-600 dark:text-gray-400">
+                            <div><i class="fa-regular fa-clock text-brand-orange mr-2"></i> 4 Nights / 5 Days</div>
+                            <div><i class="fa-solid fa-mountain text-brand-orange mr-2"></i> 14,100 ft</div>
+                            <div><i class="fa-solid fa-cloud-sun text-brand-orange mr-2"></i> Mid June - Oct</div>
+                            <div class="font-bold text-gray-900 dark:text-white"><i class="fa-solid fa-tag text-brand-orange mr-2"></i> On Request</div>
+                        </div>
+                        <a href="#contact" class="block text-center w-full bg-brand-blue dark:bg-slate-700 text-white py-3 rounded-lg font-bold uppercase tracking-wider hover:bg-brand-orange transition">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Trek Card 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl group fade-in-up" style="transition-delay: 100ms;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522199710521-72d69614c71c?auto=format&fit=crop&w=800&q=80" alt="Beas Kund Trek" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 right-4 bg-white dark:bg-slate-900 px-3 py-1 rounded-full text-xs font-bold text-brand-green shadow-lg">Easy to Moderate</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-brand-orange transition">Beas Kund Trek</h3>
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm text-gray-600 dark:text-gray-400">
+                            <div><i class="fa-regular fa-clock text-brand-orange mr-2"></i> 2 Nights / 3 Days</div>
+                            <div><i class="fa-solid fa-mountain text-brand-orange mr-2"></i> 12,772 ft</div>
+                            <div><i class="fa-solid fa-cloud-sun text-brand-orange mr-2"></i> May - Oct</div>
+                            <div class="font-bold text-gray-900 dark:text-white"><i class="fa-solid fa-tag text-brand-orange mr-2"></i> On Request</div>
+                        </div>
+                        <a href="#contact" class="block text-center w-full bg-brand-blue dark:bg-slate-700 text-white py-3 rounded-lg font-bold uppercase tracking-wider hover:bg-brand-orange transition">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Trek Card 3 -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl group fade-in-up" style="transition-delay: 200ms;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=800&q=80" alt="Bhrigu Lake Trek" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 right-4 bg-white dark:bg-slate-900 px-3 py-1 rounded-full text-xs font-bold text-brand-orange shadow-lg">Moderate</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-brand-orange transition">Bhrigu Lake Trek</h3>
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm text-gray-600 dark:text-gray-400">
+                            <div><i class="fa-regular fa-clock text-brand-orange mr-2"></i> 2 Nights / 3 Days</div>
+                            <div><i class="fa-solid fa-mountain text-brand-orange mr-2"></i> 14,009 ft</div>
+                            <div><i class="fa-solid fa-cloud-sun text-brand-orange mr-2"></i> May - Oct</div>
+                            <div class="font-bold text-gray-900 dark:text-white"><i class="fa-solid fa-tag text-brand-orange mr-2"></i> On Request</div>
+                        </div>
+                        <a href="#contact" class="block text-center w-full bg-brand-blue dark:bg-slate-700 text-white py-3 rounded-lg font-bold uppercase tracking-wider hover:bg-brand-orange transition">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Trek Card 4 -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl group fade-in-up">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542699866-5f042e88a0b0?auto=format&fit=crop&w=800&q=80" alt="Friendship Peak Expedition" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">Challenging</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-brand-orange transition">Friendship Peak Expedition</h3>
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm text-gray-600 dark:text-gray-400">
+                            <div><i class="fa-regular fa-clock text-brand-orange mr-2"></i> 6 Nights / 7 Days</div>
+                            <div><i class="fa-solid fa-mountain text-brand-orange mr-2"></i> 17,352 ft</div>
+                            <div><i class="fa-solid fa-cloud-sun text-brand-orange mr-2"></i> Sep - Oct</div>
+                            <div class="font-bold text-gray-900 dark:text-white"><i class="fa-solid fa-tag text-brand-orange mr-2"></i> On Request</div>
+                        </div>
+                        <a href="#contact" class="block text-center w-full bg-brand-blue dark:bg-slate-700 text-white py-3 rounded-lg font-bold uppercase tracking-wider hover:bg-brand-orange transition">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Trek Card 5 -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-xl group fade-in-up" style="transition-delay: 100ms;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?auto=format&fit=crop&w=800&q=80" alt="Sar Pass Trek" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 right-4 bg-white dark:bg-slate-900 px-3 py-1 rounded-full text-xs font-bold text-brand-orange shadow-lg">Moderate</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-brand-orange transition">Sar Pass Trek</h3>
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm text-gray-600 dark:text-gray-400">
+                            <div><i class="fa-regular fa-clock text-brand-orange mr-2"></i> 4 Nights / 5 Days</div>
+                            <div><i class="fa-solid fa-mountain text-brand-orange mr-2"></i> 13,800 ft</div>
+                            <div><i class="fa-solid fa-cloud-sun text-brand-orange mr-2"></i> May - Oct</div>
+                            <div class="font-bold text-gray-900 dark:text-white"><i class="fa-solid fa-tag text-brand-orange mr-2"></i> On Request</div>
+                        </div>
+                        <a href="#contact" class="block text-center w-full bg-brand-blue dark:bg-slate-700 text-white py-3 rounded-lg font-bold uppercase tracking-wider hover:bg-brand-orange transition">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-20 bg-brand-blue bg-cover bg-center bg-fixed relative" style="background-image: url('https://kommodo.ai/i/YD3ozLt2lBZTwuu3Tvfn');">
+        <div class="absolute inset-0 bg-brand-blue/80 dark:bg-slate-900/90 mix-blend-multiply"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+                <div class="fade-in-up">
+                    <i class="fa-solid fa-face-smile text-4xl text-brand-orange mb-4"></i>
+                    <div class="text-4xl md:text-5xl font-bold font-heading mb-2"><span class="counter" data-target="1500">0</span>+</div>
+                    <div class="uppercase tracking-widest text-sm text-gray-300">Happy Explorers</div>
+                </div>
+                <div class="fade-in-up" style="transition-delay: 100ms;">
+                    <i class="fa-solid fa-route text-4xl text-brand-orange mb-4"></i>
+                    <div class="text-4xl md:text-5xl font-bold font-heading mb-2"><span class="counter" data-target="350">0</span>+</div>
+                    <div class="uppercase tracking-widest text-sm text-gray-300">Successful Treks</div>
+                </div>
+                <div class="fade-in-up" style="transition-delay: 200ms;">
+                    <i class="fa-solid fa-mountain text-4xl text-brand-orange mb-4"></i>
+                    <div class="text-4xl md:text-5xl font-bold font-heading mb-2"><span class="counter" data-target="50">0</span>+</div>
+                    <div class="uppercase tracking-widest text-sm text-gray-300">Expeditions</div>
+                </div>
+                <div class="fade-in-up" style="transition-delay: 300ms;">
+                    <i class="fa-solid fa-calendar-check text-4xl text-brand-orange mb-4"></i>
+                    <div class="text-4xl md:text-5xl font-bold font-heading mb-2"><span class="counter" data-target="10">0</span>+</div>
+                    <div class="uppercase tracking-widest text-sm text-gray-300">Years Exp.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adventure Gallery (Masonry) -->
+    <section id="gallery" class="py-24 bg-white dark:bg-brand-blue">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <span class="text-brand-orange font-bold uppercase tracking-widest mb-2 block">Moments</span>
+                <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">Adventure Gallery</h2>
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4 text-sm font-medium text-gray-600 dark:text-gray-400">
+                    <span class="bg-gray-100 dark:bg-slate-800 px-4 py-1 rounded-full">Mountain Landscapes</span>
+                    <span class="bg-gray-100 dark:bg-slate-800 px-4 py-1 rounded-full">Camping</span>
+                    <span class="bg-gray-100 dark:bg-slate-800 px-4 py-1 rounded-full">Group Adventures</span>
+                    <span class="bg-gray-100 dark:bg-slate-800 px-4 py-1 rounded-full">Summit Views</span>
+                    <span class="bg-gray-100 dark:bg-slate-800 px-4 py-1 rounded-full">Snow Treks</span>
+                </div>
+            </div>
+
+            <!-- Using provided image URLs for masonry -->
+            <div class="masonry fade-in-up">
+                <div class="masonry-item img-zoom-container rounded-xl overflow-hidden group shadow-lg" onclick="openLightbox('https://kommodo.ai/i/eXw4vZcpGgXP3PUTnDrV')">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition z-10 flex items-center justify-center pointer-events-none">
+                        <i class="fa-solid fa-expand text-white text-3xl"></i>
+                    </div>
+                    <img src="https://kommodo.ai/i/eXw4vZcpGgXP3PUTnDrV" alt="Gallery 1" class="img-zoom w-full h-auto">
+                </div>
+                
+                <div class="masonry-item img-zoom-container rounded-xl overflow-hidden group shadow-lg" onclick="openLightbox('https://kommodo.ai/i/UxyP2a9PwAff3j8ERyX8')">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition z-10 flex items-center justify-center pointer-events-none">
+                        <i class="fa-solid fa-expand text-white text-3xl"></i>
+                    </div>
+                    <img src="https://kommodo.ai/i/UxyP2a9PwAff3j8ERyX8" alt="Gallery 2" class="img-zoom w-full h-auto">
+                </div>
+
+                <div class="masonry-item img-zoom-container rounded-xl overflow-hidden group shadow-lg" onclick="openLightbox('https://kommodo.ai/i/gxwJYNFY7ww9tcCFHbjj')">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition z-10 flex items-center justify-center pointer-events-none">
+                        <i class="fa-solid fa-expand text-white text-3xl"></i>
+                    </div>
+                    <img src="https://kommodo.ai/i/gxwJYNFY7ww9tcCFHbjj" alt="Gallery 3" class="img-zoom w-full h-auto">
+                </div>
+
+                <div class="masonry-item img-zoom-container rounded-xl overflow-hidden group shadow-lg" onclick="openLightbox('https://kommodo.ai/i/gm3OF6tfjD5sph7YWG8L')">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition z-10 flex items-center justify-center pointer-events-none">
+                        <i class="fa-solid fa-expand text-white text-3xl"></i>
+                    </div>
+                    <img src="https://kommodo.ai/i/gm3OF6tfjD5sph7YWG8L" alt="Gallery 4" class="img-zoom w-full h-auto">
+                </div>
+
+                <div class="masonry-item img-zoom-container rounded-xl overflow-hidden group shadow-lg" onclick="openLightbox('https://kommodo.ai/i/Qk6GWFL8aeusYwlK0zj8')">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition z-10 flex items-center justify-center pointer-events-none">
+                        <i class="fa-solid fa-expand text-white text-3xl"></i>
+                    </div>
+                    <img src="https://kommodo.ai/i/Qk6GWFL8aeusYwlK0zj8" alt="Gallery 5" class="img-zoom w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="reviews" class="py-24 bg-gray-50 dark:bg-slate-900 relative">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <span class="text-brand-orange font-bold uppercase tracking-widest mb-2 block">Word of Mouth</span>
+                <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">What Explorers Say</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Featured Review -->
+                <div class="md:col-span-3 bg-white dark:bg-slate-800 p-8 md:p-12 rounded-2xl shadow-xl relative overflow-hidden fade-in-up border border-gray-100 dark:border-slate-700">
+                    <i class="fa-solid fa-quote-left text-6xl text-brand-orange/10 absolute top-6 left-6"></i>
+                    <div class="relative z-10 text-center max-w-4xl mx-auto">
+                        <div class="text-yellow-400 text-xl mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xl md:text-2xl font-heading text-gray-800 dark:text-gray-200 mb-6 leading-relaxed italic">
+                            "Best experience with Sir Mangal Thakur. Best amenities and highly experienced instructors. The location was amazing, the tents were comfortable, the equipment quality was excellent, and the planning was outstanding. Everyone should go with them."
+                        </p>
+                        <h4 class="font-bold text-lg text-gray-900 dark:text-white">— Dr. Vikrant Wanmali</h4>
+                    </div>
+                </div>
+
+                <!-- Additional Review 1 -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg fade-in-up border border-gray-100 dark:border-slate-700">
+                    <div class="text-yellow-400 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 italic">"Wonderful experience with a professional and supportive team. Highly recommended."</p>
+                    <h4 class="font-bold text-sm text-gray-900 dark:text-white">Google User</h4>
+                </div>
+
+                <!-- Additional Review 2 -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg fade-in-up border border-gray-100 dark:border-slate-700">
+                    <div class="text-yellow-400 text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 italic">"Excellent trekking experience with knowledgeable guides and well-organized arrangements."</p>
+                    <h4 class="font-bold text-sm text-gray-900 dark:text-white">Happy Trekker</h4>
+                </div>
+                
+                <!-- Instagram Card -->
+                <div class="bg-gradient-to-br from-purple-600 via-pink-500 to-brand-orange p-8 rounded-2xl shadow-lg fade-in-up text-white flex flex-col justify-center items-center text-center">
+                    <i class="fa-brands fa-instagram text-4xl mb-4"></i>
+                    <h3 class="font-bold text-xl mb-2">Join Our Community</h3>
+                    <p class="text-sm mb-6">See our latest adventures and tag us in yours!</p>
+                    <a href="https://www.instagram.com/thehimalayanexplorers" target="_blank" rel="noopener noreferrer" class="bg-white text-pink-600 px-6 py-2 rounded-full font-bold text-sm hover:scale-105 transition shadow-lg">
+                        @thehimalayanexplorers
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white dark:bg-brand-blue">
+        <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="text-brand-orange font-bold uppercase tracking-widest mb-2 block">Information</span>
+                <h2 class="font-heading text-4xl font-bold text-gray-900 dark:text-white">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4 fade-in-up">
+                <!-- FAQ Item -->
+                <div class="border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden bg-gray-50 dark:bg-slate-800/50">
+                    <button class="accordion-btn w-full px-6 py-4 text-left font-bold text-gray-900 dark:text-white flex justify-between items-center focus:outline-none">
+                        What should I pack?
+                        <i class="fa-solid fa-plus text-brand-orange transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-6 bg-white dark:bg-slate-800">
+                        <p class="py-4 text-gray-600 dark:text-gray-300 text-sm">We provide a detailed packing list once you book. Essentials include warm layered clothing, a good waterproof jacket, trekking shoes with good grip, sunglasses, personal medicines, and a reusable water bottle.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden bg-gray-50 dark:bg-slate-800/50">
+                    <button class="accordion-btn w-full px-6 py-4 text-left font-bold text-gray-900 dark:text-white flex justify-between items-center focus:outline-none">
+                        Are beginners welcome?
+                        <i class="fa-solid fa-plus text-brand-orange transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-6 bg-white dark:bg-slate-800">
+                        <p class="py-4 text-gray-600 dark:text-gray-300 text-sm">Absolutely! We have specific treks designed for beginners like the Beas Kund trek. Our guides set a comfortable pace and ensure everyone acclimatizes properly.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden bg-gray-50 dark:bg-slate-800/50">
+                    <button class="accordion-btn w-full px-6 py-4 text-left font-bold text-gray-900 dark:text-white flex justify-between items-center focus:outline-none">
+                        Is camping equipment provided?
+                        <i class="fa-solid fa-plus text-brand-orange transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-6 bg-white dark:bg-slate-800">
+                        <p class="py-4 text-gray-600 dark:text-gray-300 text-sm">Yes, we provide premium quality tents, warm sleeping bags, camping mats, and dining facilities. You only need to carry your personal backpack.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden bg-gray-50 dark:bg-slate-800/50">
+                    <button class="accordion-btn w-full px-6 py-4 text-left font-bold text-gray-900 dark:text-white flex justify-between items-center focus:outline-none">
+                        Are guides certified?
+                        <i class="fa-solid fa-plus text-brand-orange transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-6 bg-white dark:bg-slate-800">
+                        <p class="py-4 text-gray-600 dark:text-gray-300 text-sm">Yes, all our lead guides, including our founder Mangal Thakur, have extensive experience, local knowledge, and basic medical training for emergencies in high altitudes.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden bg-gray-50 dark:bg-slate-800/50">
+                    <button class="accordion-btn w-full px-6 py-4 text-left font-bold text-gray-900 dark:text-white flex justify-between items-center focus:outline-none">
+                        How do I book?
+                        <i class="fa-solid fa-plus text-brand-orange transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content px-6 bg-white dark:bg-slate-800">
+                        <p class="py-4 text-gray-600 dark:text-gray-300 text-sm">You can book by reaching out to us via Call, WhatsApp, or the Contact Form below. We'll share available dates, detailed itineraries, and payment instructions to confirm your slot.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gray-50 dark:bg-slate-900 relative">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <span class="text-brand-orange font-bold uppercase tracking-widest mb-2 block">Start Your Journey</span>
+                <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">Get in Touch</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Action Cards -->
+                <div class="lg:col-span-4 space-y-6 fade-in-up">
+                    <a href="tel:+919418503080" class="flex items-center gap-6 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg hover:-translate-y-1 transition group border border-transparent hover:border-brand-orange">
+                        <div class="bg-brand-blue text-white w-14 h-14 flex justify-center items-center rounded-full text-2xl group-hover:bg-brand-orange transition"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-1">Call Now</h4>
+                            <p class="text-brand-orange font-medium">+91 94185 03080</p>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/919418503080?text=Hello%20The%20Himalayan%20Explorers,%20I%20am%20interested%20in%20joining%20one%20of%20your%20upcoming%20treks.%20Please%20share%20available%20packages,%20dates,%20pricing,%20and%20booking%20details." target="_blank" rel="noopener noreferrer" class="flex items-center gap-6 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg hover:-translate-y-1 transition group border border-transparent hover:border-[#25D366]">
+                        <div class="bg-[#25D366] text-white w-14 h-14 flex justify-center items-center rounded-full text-3xl group-hover:scale-110 transition shadow-lg shadow-green-500/30"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-1">WhatsApp</h4>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Instant Reply</p>
+                        </div>
+                    </a>
+
+                    <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-lg">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i class="fa-solid fa-location-dot text-brand-orange text-2xl"></i>
+                            <h4 class="font-bold text-gray-900 dark:text-white">Our Location</h4>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Nasogi, Manali, Himachal Pradesh 175131, India</p>
+                        <a href="https://maps.google.com/?q=Nasogi,+Manali,+Himachal+Pradesh+175131" target="_blank" class="text-brand-orange text-sm font-bold hover:underline">Open in Google Maps <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-8 bg-white dark:bg-slate-800 p-8 md:p-10 rounded-2xl shadow-xl fade-in-up border border-gray-100 dark:border-slate-700">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white font-heading">Send an Inquiry</h3>
+                    <form onsubmit="event.preventDefault(); alert('Thank you for your inquiry! Our team will contact you soon.');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
+                                <input type="text" required class="w-full bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-brand-orange transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Phone Number</label>
+                                <input type="tel" required class="w-full bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-brand-orange transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                                <input type="email" required class="w-full bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-brand-orange transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Participants</label>
+                                <input type="number" min="1" class="w-full bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-brand-orange transition">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Adventure Interested In</label>
+                                <select class="w-full bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-brand-orange transition appearance-none">
+                                    <option>Select an option</option>
+                                    <option>Hampta Pass Trek</option>
+                                    <option>Beas Kund Trek</option>
+                                    <option>Bhrigu Lake Trek</option>
+                                    <option>Friendship Peak Expedition</option>
+                                    <option>Sar Pass Trek</option>
+                                    <option>Other / Custom Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                                <textarea rows="4" class="w-full bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-brand-orange transition"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-orange text-white py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-orange-600 transition shadow-lg shadow-orange-500/30 text-lg">Send Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-blue text-white pt-20 pb-10 border-t-4 border-brand-orange relative overflow-hidden">
+        <!-- Mountain silhouette overlay at bottom -->
+        <div class="absolute bottom-0 left-0 w-full h-32 opacity-10 pointer-events-none" style="background: url('https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_1280.jpg') center bottom/cover no-repeat; mask-image: linear-gradient(to top, black, transparent); -webkit-mask-image: linear-gradient(to top, black, transparent);"></div>
+        
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+                
+                <div>
+                    <img src="https://kommodo.ai/i/ueoSeLx4Be1d8ROB81vp" alt="Logo" class="w-20 mb-6 rounded-full border-2 border-brand-orange">
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        The Himalayan Explorers is a community of mountain lovers and adventurers providing safe, authentic, and unforgettable journeys in the Himalayas.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/thehimalayanexplorers" class="w-10 h-10 rounded-full bg-slate-800 flex justify-center items-center hover:bg-brand-orange transition text-white"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/919418503080" class="w-10 h-10 rounded-full bg-slate-800 flex justify-center items-center hover:bg-[#25D366] transition text-white"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="tel:+919418503080" class="w-10 h-10 rounded-full bg-slate-800 flex justify-center items-center hover:bg-blue-500 transition text-white"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-xl mb-6 text-white">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#about" class="hover:text-brand-orange transition"><i class="fa-solid fa-angle-right mr-2 text-brand-orange"></i>About Us</a></li>
+                        <li><a href="#founder" class="hover:text-brand-orange transition"><i class="fa-solid fa-angle-right mr-2 text-brand-orange"></i>Meet the Founder</a></li>
+                        <li><a href="#treks" class="hover:text-brand-orange transition"><i class="fa-solid fa-angle-right mr-2 text-brand-orange"></i>Trekking Packages</a></li>
+                        <li><a href="#gallery" class="hover:text-brand-orange transition"><i class="fa-solid fa-angle-right mr-2 text-brand-orange"></i>Adventure Gallery</a></li>
+                        <li><a href="#reviews" class="hover:text-brand-orange transition"><i class="fa-solid fa-angle-right mr-2 text-brand-orange"></i>Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-xl mb-6 text-white">Contact Info</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-orange"></i>
+                            <span>The Himalayan Explorers<br>Nasogi, Manali<br>Himachal Pradesh 175131</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-orange"></i>
+                            <a href="tel:+919418503080" class="hover:text-white transition">+91 94185 03080</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-orange"></i>
+                            <a href="#contact" class="hover:text-white transition">Inquire Now</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-xl mb-6 text-white">Our Spirit</h4>
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 text-center">
+                        <i class="fa-solid fa-quote-left text-brand-orange text-2xl mb-3"></i>
+                        <p class="font-heading text-lg italic text-gray-300 leading-snug">
+                            "The mountains are calling, and we must go."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-xs">
+                <p>&copy; <span id="year"></span> The Himalayan Explorers. All Rights Reserved.</p>
+                <p>Designed for Adventure.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 left-6 z-40 flex flex-col gap-3">
+        <a href="https://wa.me/919418503080?text=Hello%20The%20Himalayan%20Explorers,%20I%20am%20interested%20in%20joining%20one%20of%20your%20upcoming%20treks.%20Please%20share%20available%20packages,%20dates,%20pricing,%20and%20booking%20details." target="_blank" class="float-btn w-14 h-14 bg-[#25D366] text-white rounded-full flex justify-center items-center text-3xl shadow-[0_0_20px_rgba(37,211,102,0.5)]">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+    
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+        <a href="tel:+919418503080" class="float-btn w-12 h-12 bg-brand-blue border-2 border-white text-white rounded-full flex justify-center items-center text-xl shadow-lg md:hidden">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <button id="scrollToTop" class="float-btn w-12 h-12 bg-brand-orange text-white rounded-full flex justify-center items-center text-xl shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Gallery Image Zoom">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-brand-orange transition focus:outline-none">&times;</button>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Set Current Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Loading Screen
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 800);
+            }, 500);
+        });
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const icon = document.getElementById('theme-icon');
+            if(document.documentElement.classList.contains('dark')) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+
+        // Navbar & Scroll Progress
+        const navbar = document.getElementById('navbar');
+        const scrollProgress = document.getElementById('progress-bar');
+        const scrollToTop = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            // Navbar glass effect
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Scroll Progress
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            scrollProgress.style.width = scrolled + "%";
+
+            // Scroll to top button visibility
+            if (window.scrollY > 500) {
+                scrollToTop.classList.remove('opacity-0', 'pointer-events-none');
+                scrollToTop.classList.add('opacity-100');
+            } else {
+                scrollToTop.classList.add('opacity-0', 'pointer-events-none');
+                scrollToTop.classList.remove('opacity-100');
+            }
+        });
+
+        // Scroll To Top action
+        scrollToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // Hero Slider
+        const slides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
+        
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 5000);
+
+        // Snow Effect Generation
+        const snowContainer = document.getElementById('snow-container');
+        function createSnowflakes() {
+            const snowflakeCount = 30; // Reduced for performance
+            for (let i = 0; i < snowflakeCount; i++) {
+                let flake = document.createElement('div');
+                flake.classList.add('snowflake');
+                
+                let size = Math.random() * 4 + 2 + 'px';
+                flake.style.width = size;
+                flake.style.height = size;
+                flake.style.left = Math.random() * 100 + 'vw';
+                flake.style.animationDuration = Math.random() * 5 + 5 + 's';
+                flake.style.animationDelay = Math.random() * 5 + 's';
+                flake.style.opacity = Math.random();
+                
+                snowContainer.appendChild(flake);
+            }
+        }
+        createSnowflakes();
+
+        // Intersection Observer for Fade-in Animations & Counters
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Counter animation
+                    if(entry.target.querySelector('.counter')) {
+                        const counters = entry.target.querySelectorAll('.counter');
+                        counters.forEach(counter => {
+                            if(!counter.classList.contains('counted')){
+                                const target = +counter.getAttribute('data-target');
+                                const duration = 2000; // 2 seconds
+                                const increment = target / (duration / 16); // 60fps
+                                
+                                let current = 0;
+                                const updateCounter = () => {
+                                    current += increment;
+                                    if(current < target) {
+                                        counter.innerText = Math.ceil(current);
+                                        requestAnimationFrame(updateCounter);
+                                    } else {
+                                        counter.innerText = target;
+                                        counter.classList.add('counted');
+                                    }
+                                };
+                                updateCounter();
+                            }
+                        });
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Accordion functionality for FAQ
+        const accordionBtns = document.querySelectorAll('.accordion-btn');
+        accordionBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Close all others
+                accordionBtns.forEach(otherBtn => {
+                    if (otherBtn !== this) {
+                        otherBtn.nextElementSibling.style.maxHeight = null;
+                        otherBtn.querySelector('i').classList.remove('fa-minus', 'rotate-180');
+                        otherBtn.querySelector('i').classList.add('fa-plus');
+                        otherBtn.classList.remove('text-brand-orange');
+                    }
+                });
+
+                // Toggle current
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.classList.remove('fa-minus', 'rotate-180');
+                    icon.classList.add('fa-plus');
+                    this.classList.remove('text-brand-orange');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus', 'rotate-180');
+                    this.classList.add('text-brand-orange');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
